@@ -1,4 +1,4 @@
-#RECAP OF CORE CONCEPTS
+# RECAP OF CORE CONCEPTS
 1. Variables
 1. Datatypes(Primitive)
 1. Conditional Statements(if-else)
