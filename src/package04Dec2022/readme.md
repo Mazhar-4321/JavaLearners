@@ -1,4 +1,4 @@
-#Strings in Java
+# Strings in Java
 1. Consider String as a special Variable
 2. Special in the sense it will have some predefined functionalities
 1. String is usually used in the situation where we want to 
@@ -24,8 +24,7 @@ uppercases.
 1. **trim()** : It will remove Whitespaces from Boundaries.
 1. **substring(start,end)** : It will return the string from start to end-1
 1. **charAt(number)** : It will give the character at position equals to number
-
-##Note : The First Character of String is at 0 not 1,Therefore if length of String is 6 then first character is at 0 position and last character is at 5th position
+## Note : The First Character of String is at 0 not 1,Therefore if length of String is 6 then first character is at 0 position and last character is at 5th position
 
 
 
