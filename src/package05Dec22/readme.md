@@ -1,4 +1,4 @@
-#Arrays
+# Arrays
 1. It is used for storing multiple values at a time.
 1. All the values must be of same datatype.
 * Syntax: int[] arrayName={value1,value2,value3,...}
