@@ -10,6 +10,7 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         Calculator c = new Calculator();
-        c.add(a,b);
+        int sum=c.add(a,b);
+        System.out.println(sum);
     }
 }
