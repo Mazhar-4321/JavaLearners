@@ -2,23 +2,23 @@ package Dec_07_2022;
 
 public class Calculator {
 
-    int add(int a, int b) {
-        int c = a + b;
+    float add(float a, float b) {
+        float c = a + b;
         return c;
     }
 
-    int sub(int a, int b) {
-        int c = a - b;
+    float sub(float a, float b) {
+        float c = a - b;
         return c;
     }
 
-    int mul(int a, int b) {
-        int c = a * b;
+    float mul(float a, float b) {
+        float c = a * b;
         return c;
     }
 
-    int divide(int a, int b) {
-        int c = a / b;
+    float divide(float a, float b) {
+        float c = a / b;
         return c;
     }
 }
