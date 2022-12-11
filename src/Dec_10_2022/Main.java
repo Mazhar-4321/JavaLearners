@@ -2,31 +2,56 @@ package Dec_10_2022;
 
 public class Main {
     public static void main(String[] args) {
-     Name name1= new Name();
-     name1.setFirstName("Syed");
-     name1.setMiddleName("Mazhar");
-     name1.setLastName("Ali");
-     Address address1= new Address();
-     address1.setArea("Golconda");
-     address1.setCity("Hyderabad");
-     address1.setZipCode(500008);
-     address1.setState("Telangana");
-     address1.setCountry("India");
-     Student student1= new Student();
-     student1.setName(name1);
-     student1.setAddress(address1);
-     student1.setMobileNumber("8125629427");
-     student1.setGender("M");
-     student1.setRollNo("542");
-        System.out.println("Name: "+student1.getName().getFirstName()+","+student1.getName().getMiddleName()+","
-        +student1.getName().getLastName());
-        System.out.println("Address: "+student1.getAddress().getArea()+","+student1.getAddress().getCity()+","+
-                student1.getAddress().getZipCode()+","+student1.getAddress().getState()+","+student1.getAddress().getCountry());
-        System.out.println("MobileNumber:"+student1.getMobileNumber());
-        System.out.println("Gender:"+student1.getGender());
-        System.out.println("Roll No :"+student1.getRollNo());
-        StudentManager sm= new StudentManager();
-        sm.printAllStudents();
+        String[] hobbiesArray = {"Coding", "Playing Chess", "Listening To Music"};
+        Main main = new Main();
+        regularExpression();
+    }
+
+    private static void regularExpression() {
+        /*
+        E.g. abc.xyz@bl.co.in
+        E.g. abc.xyz@bl.co.in -
+        Email has 3 mandatory parts (abc, bl& co) and 2 optional (xyz & in) with
+precise @ and . positions
+         */
+        String p ="Mazhar@12345M";
+        String pattern="^(abc[^a-zA-z0-9]*\\.xyz@bl\\.co\\.in)$";
+        System.out.println(p.matches("((?=.*[0-9])(?=.*[A-Z])(?=.{8,}$).*)(^([a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*)$)"));
+        //a*ba*
+        //UC1,UC2
+        //^[A-Z][a-zA-Z0-9[^a-zA-Z0-9]]{2,}
+        //UC3
+        //^([a-z]{3}(\.xyz)?@bl\.co(.in)?)$
+        //UC4
+        //^(91 [1-9][0-9]{9})$
+        //UC5
+        //^([a-zA-Z0-9^[a-zA-Z0-9]]{8,})$
+        //UC6
+        //(?=.*[A-Z])(^([a-zA-Z0-9^[a-zA-Z0-9]]{8,})$)
+        //UC7
+        //"((?=.*[0-9])(?=.*[A-Z])(?=.{8,}$).*)(^([a-zA-Z0-9]*#[a-zA-Z0-9]*)$)"
+        //p = p.replaceAll("((?=.*[0-9])(?=.*[A-Z])(?=.{8,}$).*)(^([a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*)$)", "19:21");
+        //System.out.println(p);
+        //Object o;
+    }
+
+    private String getMessage(String[] hobbies) {
+        if (hobbies == null) {
+            return "Sorry Invalid Input";
+        }
+        if (hobbies.length == 1) {
+            return "My Hobby is " + hobbies[0];
+        }
+        String message = "My Hobbies are ";
+        for (int i = 0; i < hobbies.length - 1; i++) {
+            if (i == hobbies.length - 2) {
+                message += hobbies[i] + " ";
+                continue;
+            }
+            message += hobbies[i] + ", ";
+        }
+        message += "and " + hobbies[hobbies.length - 1] + ".";
+        return message;
 
     }
 }

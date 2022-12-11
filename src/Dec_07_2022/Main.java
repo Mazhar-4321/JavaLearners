@@ -14,7 +14,7 @@ public class Main {
         if(option==1){
             Calculator c = new Calculator();
             float sum=c.add(a,b);
-            System.out.println("Sum="+sum);
+            System.out.println("Sum="+(a+b));
         }
         if(option==2){
             Calculator c = new Calculator();
