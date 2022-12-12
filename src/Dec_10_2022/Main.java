@@ -1,22 +1,29 @@
 package Dec_10_2022;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String[] hobbiesArray = {"Coding", "Playing Chess", "Listening To Music"};
+        String[] hobbiesArray = {"Coding", "Playing Chess"};
         Main main = new Main();
-        regularExpression();
+        System.out.println( main.getMessage(hobbiesArray));
+//        while (true) {
+//            System.out.println("Enter a String");
+//            regularExpression(new Scanner(System.in).next());
+//        }
     }
 
-    private static void regularExpression() {
+    private static void regularExpression(String s) {
         /*
         E.g. abc.xyz@bl.co.in
         E.g. abc.xyz@bl.co.in -
         Email has 3 mandatory parts (abc, bl& co) and 2 optional (xyz & in) with
 precise @ and . positions
          */
-        String p ="Mazhar@12345M";
-        String pattern="^(abc[^a-zA-z0-9]*\\.xyz@bl\\.co\\.in)$";
-        System.out.println(p.matches("((?=.*[0-9])(?=.*[A-Z])(?=.{8,}$).*)(^([a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*)$)"));
+        String p =s;
+        String pattern="^(abc[0-9._+-]*(\\.[a-z]{2,})?@([a-z]{2,}|[0-9]{1})\\.[a-z]{2,}(\\.[a-z]{2,})?)$";
+        //System.out.println(p.matches("((?=.*[0-9])(?=.*[A-Z])(?=.{8,}$).*)(^([a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*)$)"));
+        System.out.println(p.matches(pattern));
         //a*ba*
         //UC1,UC2
         //^[A-Z][a-zA-Z0-9[^a-zA-Z0-9]]{2,}
@@ -46,7 +53,7 @@ precise @ and . positions
         for (int i = 0; i < hobbies.length - 1; i++) {
             if (i == hobbies.length - 2) {
                 message += hobbies[i] + " ";
-                continue;
+                break;
             }
             message += hobbies[i] + ", ";
         }
