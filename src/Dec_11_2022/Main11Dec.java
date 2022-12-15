@@ -47,5 +47,21 @@ public class Main11Dec {
             studentManager.addStudent(studentObject);//
         }
         studentManager.printAllStudents();
+        System.out.println("Do u want to delete Student Press 1 for Yes 2 for No");
+        int option=sc.nextInt();
+        if(option==1){
+            System.out.println("Enter The Name of Student You Want To delete");
+            String name = sc.next();
+            studentManager.deleteStudent(name);
+            studentManager.printAllStudents();
+        }
+        System.out.println("Do u want to Edit Student Press 1 for Yes 2 for No");
+         option=sc.nextInt();
+        if(option==1){
+            System.out.println("Enter The Name of Student You Want To Edit");
+            String name = sc.next();
+            studentManager.editStudent(name);
+            studentManager.printAllStudents();
+        }
     }
 }
